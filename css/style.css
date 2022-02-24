@@ -1,5 +1,21 @@
 body{
     margin: 0;
     padding: 0;
-    background-color: rgb(233, 214, 214);
+    
+}
+
+.form-inline {
+  margin-left: 70%;
+}
+
+.fab {
+  margin-left: 20%;
+}
+
+#navbarCollapse {
+  margin-left: 30%;
+}
+
+body{
+  background-color: rgb(174, 174, 207);
 }
