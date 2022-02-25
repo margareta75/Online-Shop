@@ -1,6 +1,3 @@
-
-import {getData} from './modules/database.js';
-import {} from './modules/script2.js';
+import { getData } from "./modules/database.js";
 
 getData();
-
