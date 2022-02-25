@@ -1,14 +1,18 @@
+import { displayProducts } from "./display.js";
+
 const databaseUrl =
   "https://online-shop-76d14-default-rtdb.europe-west1.firebasedatabase.app/products.json";
 
 const dbUrl =
   "https://online-shop-76d14-default-rtdb.europe-west1.firebasedatabase.app/";
 
+// Function to get data from Firebase
 const getData = () => {
   fetch(databaseUrl)
     .then((resp) => resp.json())
     .then((data) => {
       console.log(data);
+      displayProducts(data);
     })
     .catch((error) => {
       console.log(error);
@@ -26,45 +30,43 @@ class Product {
   }
 
   // Function for adding new products to database
-    addProductToDatabase = () => {
-  
-      let prod = {
-        name: `${this.name}`,
-        customId: `${this.customId}`,
-        price: `${this.price}`,
-        imgSrc: `${this.imgSrc}`,
-        stockBalance: `${this.stockBalance}`,
-      };
-  
-      const headerObject = {
-        "Content-type": "application/json; charset=UTF-8",
-      };
-  
-      const init = {
-        method: "PUT",
-        body: JSON.stringify(prod),
-        headers: headerObject,
-      };
-  
-      // Fetch with database and add new player with custom id to database
-      fetch(dbUrl + `/products/${prod.customId}.json`, init)
-        .then((response) => response.json())
-        .then((data) => {
-          console.log(data);
-        })
-        .catch((error) => {
-          console.log(error);
-        });
+  addProductToDatabase = () => {
+    let prod = {
+      name: `${this.name}`,
+      customId: `${this.customId}`,
+      price: `${this.price}`,
+      imgSrc: `${this.imgSrc}`,
+      stockBalance: `${this.stockBalance}`,
+    };
+
+    const headerObject = {
+      "Content-type": "application/json; charset=UTF-8",
+    };
+
+    const init = {
+      method: "PUT",
+      body: JSON.stringify(prod),
+      headers: headerObject,
+    };
+
+    // Fetch with database and add new player with custom id to database
+    fetch(dbUrl + `/products/${prod.customId}.json`, init)
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   };
-  
 }
 
 // Creating 6 different products with constructor
 const product1 = new Product(
   "0",
-  "Draperad skortklänning",
+  "Draperad skjortklänning",
   299,
-  "img/draperad-skortklanning.jpg",
+  "img/draperad-skjortklanning.jpg",
   2
 );
 const product2 = new Product(
