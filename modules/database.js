@@ -66,7 +66,7 @@ const product1 = new Product(
   "0",
   "Draperad skjortklänning",
   299,
-  "img/draperad-skjortklanning.jpg",
+  "img/draperad_skjortklanning.jpg",
   2
 );
 const product2 = new Product(
