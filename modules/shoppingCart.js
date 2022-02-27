@@ -16,10 +16,10 @@
 console.log(' ***** test shopping cart ***** ');
 
 class ShoppingCart {
-    // Constructor for ShoppingCart
+  // Constructor for ShoppingCart
   constructor() {
     this.total = 0;
-    this.items = []; 
+    this.items = [];
   }
 
   // Function to add item to cart
@@ -63,11 +63,11 @@ class ShoppingCart {
 }
 
 const newCart = new ShoppingCart();
-newCart.addItem("Luftig klänning", 1, 199);
-newCart.addItem("Ribbad klänning", 1, 349);
+newCart.addItem("Luftig klänning", 1, 250);
+newCart.addItem("Ribbad klänning", 1, 450);
 
 
-console.log(' ***** end of test shopping cart ***** ');
+console.log(newCart);
 
 export { ShoppingCart };
 
