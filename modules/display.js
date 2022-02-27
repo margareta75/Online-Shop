@@ -6,10 +6,10 @@ const displayProducts = (arr) => {
 
   for (let i = 0; i < arr.length; i++); {
 
-    let img = arr[1].imgSrc;
-    let name = arr[1].name;
-    let price = arr[1].price;
-    let stock = arr[1].stockBalance;
+    let img = arr[i].imgSrc;
+    let name = arr[i].name;
+    let price = arr[i].price;
+    let stock = arr[i].stockBalance;
 
     let div = document.createElement('div');//skapa div där products skall synas
 
