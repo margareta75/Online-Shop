@@ -1,53 +1,39 @@
-
-
-const newDiv = document.querySelector('#newContainer')
-
+const newDiv = document.querySelector("#new-container");
 
 // Function to display products in HTML
 const displayProducts = (arr) => {
-
   for (let i = 0; i < arr.length; i++) {
-
     let img = arr[i].imgSrc;
     let name = arr[i].name;
     let price = arr[i].price;
     let stock = arr[i].stockBalance;
 
-    let div = document.createElement('div');//skapa div där products skall synas
-    let imgNew = document.createElement('img')
-    let nameNew = document.createElement('p');
-    let priceNew = document.createElement('p')
-    let stockNew = document.createElement('p');
-    let buttonNew = document.createElement('button');
+    let div = document.createElement("div"); //skapa div där products skall synas
+    let imgNew = document.createElement("img");
+    let nameNew = document.createElement("p");
+    let priceNew = document.createElement("p");
+    let stockNew = document.createElement("p");
+    let buttonNew = document.createElement("button");
 
     imgNew.src = img;
-    nameNew.innerText = name
-    priceNew.innerText = price + ' kr'
-    stockNew.innerText = 'Stock balance: ' + stock
-    buttonNew.innerText = 'add to cart'
+    nameNew.innerText = name;
+    priceNew.innerText = price + " kr";
+    stockNew.innerText = "Stock balance: " + stock;
+    buttonNew.innerText = "add to cart";
 
     //lägga till produkter till div i
-    buttonNew.className = 'add-item-button'
-    div.className = 'item-containerNew'
-    div.appendChild(imgNew)
-    div.appendChild(nameNew)
-    div.appendChild(priceNew)
-    div.appendChild(stockNew)
-    div.appendChild(buttonNew)
-    newDiv.appendChild(div)
-
-
-
+    nameNew.className = "p-item";
+    priceNew.className = "p-item";
+    stockNew.className = "p-item";
+    buttonNew.className = "add-item-button";
+    div.className = "item-container";
+    div.appendChild(imgNew);
+    div.appendChild(nameNew);
+    div.appendChild(priceNew);
+    div.appendChild(stockNew);
+    div.appendChild(buttonNew);
+    newDiv.appendChild(div);
   }
-
-
-
 };
-
-
-
-
-
-
 
 export { displayProducts };

@@ -35,9 +35,12 @@
 
     <link href="css/style.css" rel="stylesheet" />
     <script type="module" src="main.js" defer></script>
-    <!-- fake fav icon -->
-    <link rel="shortcut icon" href="#" type="image/x-icon" />
-
+    <link
+      rel="icon"
+      href="img/shopping-cart.png"
+      type="image/png"
+      sizes="16x16"
+    />
     <title>OnlineShop Gosia och Miki</title>
   </head>
   <body>
@@ -55,6 +58,7 @@
             <li class="nav-item">
               <a class="nav-link" href="#">Contact </a>
             </li>
+            <!-- Shopping Cart -->
             <li class="nav-item dropdown">
               <a
                 class="nav-link dropdown-toggle"
@@ -84,17 +88,18 @@
         </div>
       </nav>
     </header>
+    <!-- Welcome text -->
     <div class="alert alert-success" role="alert">
       <p class="mb-0">
         Welcome to our online shop, if you have any questions please feel free
         to contact us.
       </p>
     </div>
-
+    <!-- Main container -->
     <div id="container">
       <div>
         <h1>Klänningar</h1>
-        <p>
+        <p id="p-lorem">
           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aliquid,
           suscipit neque incidunt commodi unde labore possimus mollitia porro
           totam, ex reprehenderit fuga distinctio rerum nostrum delectus
@@ -118,8 +123,8 @@
           </div>
         </div>
       </div>
-      
-      <div id="newContainer"></div>
-
+      <!-- Products container -->
+      <div id="new-container"></div>
+    </div>
   </body>
 </html>
