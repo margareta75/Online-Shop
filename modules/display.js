@@ -1,3 +1,8 @@
+const displayProducts = (arr) => {
+};
+
+export { displayProducts };
+
 const newDiv = document.querySelector('#newContainer')
 
 
