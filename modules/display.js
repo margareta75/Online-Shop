@@ -41,11 +41,3 @@ const displayProducts = (arr) => {
 
 
 export { displayProducts };
-
-
-
-
-
-
-
-
