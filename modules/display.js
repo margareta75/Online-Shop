@@ -26,7 +26,8 @@ const displayProducts = (arr) => {
     stockNew.innerText = 'Stock balance: ' + stock
     buttonNew.innerText = 'add to cart'
 
-    //lägga till produkter till div i html
+    //lägga till produkter till div i
+    buttonNew.className = 'add-item-button'
     div.className = 'item-containerNew'
     div.appendChild(imgNew)
     div.appendChild(nameNew)
