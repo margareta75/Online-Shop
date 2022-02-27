@@ -1,10 +1,12 @@
+
+
 const newDiv = document.querySelector('#newContainer')
 
 
 // Function to display products in HTML
 const displayProducts = (arr) => {
 
-  for (let i = 0; i < arr.length; i++); {
+  for (let i = 0; i < arr.length; i++) {
 
     let img = arr[i].imgSrc;
     let name = arr[i].name;
@@ -36,6 +38,7 @@ const displayProducts = (arr) => {
   }
 
 };
+
 
 
 
