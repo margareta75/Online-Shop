@@ -1,5 +1,5 @@
 import { getData } from "./modules/database.js";
-import { ShoppingCart } from "./modules/shoppingCart.js"
+// import { ShoppingCart } from "./modules/shoppingCart.js"
 import { Product } from "./modules/productClass.js";
 
 // Creating 6 different products with constructor

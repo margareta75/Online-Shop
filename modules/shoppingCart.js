@@ -13,8 +13,6 @@
 // Både när man lägger till eller tar bort en produkt ur shoppingbagen. 
 // Den här metoden ska även varna om man försöker köpa fler produkter än vad som finns på lager.
 
-console.log(' ***** test shopping cart ***** ');
-
 class ShoppingCart {
   // Constructor for ShoppingCart
   constructor() {
@@ -24,12 +22,14 @@ class ShoppingCart {
 
   // Function to add item to cart
   addItem(itemName, quantity, price) {
+    console.log(quantity);
     // Add cost of added items to the current value of total
     this.total += quantity * price;
     // Add item to the items array
     this.items[itemName] = quantity;
     console.log(this.total);
     console.log(this.items);
+    console.log(this.items[itemName]);
   }
 
   // Function to delete item from cart
@@ -62,12 +62,11 @@ class ShoppingCart {
 
 }
 
-const newCart = new ShoppingCart();
-newCart.addItem("Luftig klänning", 1, 250);
-newCart.addItem("Ribbad klänning", 1, 450);
+// const newCart = new ShoppingCart();
+// newCart.addItem("Luftig klänning", 1, 250);
+// newCart.addItem("Ribbad klänning", 1, 450);
 
-
-console.log(newCart);
+// console.log(newCart);
 
 export { ShoppingCart };
 
