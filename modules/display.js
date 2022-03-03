@@ -1,4 +1,4 @@
-import { clickEvent } from "./eventsCart.js"
+import { clickEvent } from "./eventsCart.js";
 
 const newDiv = document.querySelector("#new-container");
 
@@ -18,6 +18,7 @@ const displayProducts = (arr) => {
     let nameNew = document.createElement("p");
     let priceNew = document.createElement("p");
     let stockNew = document.createElement("p");
+    let inputNew = document.createElement("input");
     let buttonNew = document.createElement("button");
 
     // Set values on elements
@@ -25,6 +26,11 @@ const displayProducts = (arr) => {
     nameNew.innerText = name;
     priceNew.innerText = price + " kr";
     stockNew.innerText = "Stock balance: " + stock;
+    inputNew.type = "number";
+    inputNew.value = 0;
+    inputNew.id = `input-${itemId}`;
+    inputNew.min = 0;
+    inputNew.max = `${stock}`;
     buttonNew.innerText = "add to cart";
     buttonNew.setAttribute("value", itemId);
 
@@ -40,10 +46,11 @@ const displayProducts = (arr) => {
     div.appendChild(nameNew);
     div.appendChild(priceNew);
     div.appendChild(stockNew);
+    div.appendChild(inputNew);
     div.appendChild(buttonNew);
     newDiv.appendChild(div);
   }
-  clickEvent();
+  clickEvent(arr);
 };
 
 export { displayProducts };
